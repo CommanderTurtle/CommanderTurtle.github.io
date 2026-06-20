@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>countku: Expert Level Counting | sHEL</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="countku: Expert Level Counting" />
+<meta name="author" content="CommanderTurtle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It started with a Discord thread. I was playing with two bots — a counting bot and Haikubot — and wondered: what if counting could be poetry? What if every number you expressed had to fit the rigid 5-7-5 structure of a haiku?" />
+<meta name="twitter:description" property="og:description" content="It started with a Discord thread. I was playing with two bots — a counting bot and Haikubot — and wondered: what if counting could be poetry? What if every number you expressed had to fit the rigid 5-7-5 structure of a haiku?" />
+<link rel="canonical" href="https://shel.sh/blog/2025-07-15-countku-side-project/" />
+<meta property="og:url" content="https://shel.sh/blog/2025-07-15-countku-side-project/" />
+<meta property="og:site_name" content="sHEL" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-15T10:00:00+00:00" />
+<meta property="article:modified_time" content="2025-07-15T10:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="countku: Expert Level Counting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"CommanderTurtle"},"dateModified":"2025-07-15T10:00:00+00:00","datePublished":"2025-07-15T10:00:00+00:00","description":"It started with a Discord thread. I was playing with two bots — a counting bot and Haikubot — and wondered: what if counting could be poetry? What if every number you expressed had to fit the rigid 5-7-5 structure of a haiku?","headline":"countku: Expert Level Counting","mainEntityOfPage":{"@type":"WebPage","@id":"https://shel.sh/blog/2025-07-15-countku-side-project/"},"url":"https://shel.sh/blog/2025-07-15-countku-side-project/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://shel.sh/feed.xml" title="sHEL" /><!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/shel-turt-256.png">
+  <link rel="apple-touch-icon" href="/assets/images/shel-turt-sq.png">
+
+  <!-- Preconnect for external assets -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+</head>
+<body><header class="site-header" id="site-header">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">
+      <picture>
+        <source srcset="/assets/images/shel-title-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="/assets/images/shel-title-light.png" alt="sHEL" height="32" style="display: block;">
+      </picture>
+    </a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" class="menu-icon">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </label>
+
+      <ul class="nav-items">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/community/">Community</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="https://docs.shel.sh" class="nav-docs" target="_blank" rel="noopener">Docs ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="post-layout">
+  <div class="post-main">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">countku: Expert Level Counting</h1>
+        <div class="post-meta-bar">
+          <div class="author-avatar">C</div>
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">CommanderTurtle</span>
+          </span>
+          <span>&bull;</span><time datetime="2025-07-15T10:00:00+00:00" itemprop="datePublished">
+            Jul 15, 2025
+          </time></div>
+        
+          <div class="blog-tags" style="margin-top: 12px;">
+            
+              <a href="/blog/tags/side-project" class="tag">side-project</a>
+            
+              <a href="/blog/tags/math" class="tag">math</a>
+            
+              <a href="/blog/tags/haiku" class="tag">haiku</a>
+            
+              <a href="/blog/tags/game" class="tag">game</a>
+            
+              <a href="/blog/tags/js" class="tag">js</a>
+            
+          </div>
+        
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>It started with a Discord thread. I was playing with two bots — a counting bot and Haikubot — and wondered: what if counting could be poetry? What if every number you expressed had to fit the rigid 5-7-5 structure of a haiku?</p>
+
+<p>That question became <strong>countku</strong>.</p>
+
+<h2 id="the-origin">The Origin</h2>
+
+<p>I posted the original concept to Reddit (<a href="https://www.reddit.com/r/haikusbot/comments/1p1aq85/countku_expert_level_counting/">r/haikusbot</a>) with a simple challenge: get both the counting bot and Haikubot to validate the same message simultaneously. The screenshot tells the whole story — me typing <code class="language-plaintext highlighter-rouge">21+1.1-1.1+1-1</code>, the counting bot accepting it as valid (it evaluates to 22), and Haikubot transcribing it into perfect 5-7-5 form:</p>
+
+<blockquote>
+  <p>Twenty two, plus one<br />
+point one, minus one point one,<br />
+plus one, minus one</p>
+</blockquote>
+
+<p>Then I pushed further. <code class="language-plaintext highlighter-rouge">1-3.000+1+1+1</code> — evaluating to 1, the next number in the count — became:</p>
+
+<blockquote>
+  <p>One minus three point<br />
+zero zero zero, plus<br />
+one, plus one, plus one</p>
+</blockquote>
+
+<p>The bots agreed. The game was born.</p>
+
+<h2 id="what-countku-actually-is">What Countku Actually Is</h2>
+
+<p>Countku is a base-ten number system more convoluted than all prime numbers. The core premise: <strong>express any mathematical result as a haiku</strong> (5-7-5 syllables) where the math actually evaluates to the intended number.</p>
+
+<p>It isn’t just wordplay — it’s a genuine constraint system with documented rules:</p>
+
+<ul>
+  <li><strong>5-7-5 syllable structure</strong> is strictly enforced</li>
+  <li><strong>No cutting words across line breaks</strong> — “ze-“ on line 1 and “ro” on line 2 is illegal</li>
+  <li><strong>Decimal is always “point”</strong> — proper mathematical English</li>
+  <li><strong>Zero variants</strong>: “zero” (2 syl), “zed” (1 syl), or “oh” (1 syl) — pick one per thread and stick to it</li>
+  <li><strong>“Type shit” and two-syllable memes</strong> are legal BS words — they pad syllables without affecting the math</li>
+  <li><strong>Words must finish at the end of a Ku</strong> — no “one point zero Oh” cheating that circumvents the memory challenge</li>
+</ul>
+
+<p>The O’Leary license applies: I don’t intend to monetize it, but if you sell countku or a variation, I ask for 1 satoshi per API call. You can wrap the shaves of pennies in envelopes and mail them to me.</p>
+
+<h2 id="the-documentation">The Documentation</h2>
+
+<p>What started as a joke grew into a fully documented system. I built out comprehensive docs across three files:</p>
+
+<p><strong><a href="https://shel.sh/projects/1.md">1.md — The Rulebook</a></strong> documents every substring in the countku lexicon with full grammatical metadata — syllable count, whether it’s a base number, scale word, math operator, preposition, or passive/active participle. There are 127 indexed substrings from “one” to “influence,” each with their bit flags for the parsing engine. Five complete data tables cover: the substring database, base glossary (Zero through Highers), full operators matrix (46+ distinct operations), prepositional/auxiliary combinations, and modifier/ordinal definitions including Latin and Greek systematic forms.</p>
+
+<p><strong><a href="https://shel.sh/projects/2.md">2.md — The Changelog</a></strong> tracks the engine evolution from v1.0 through v7.4, including the deferred emission engine, <code class="language-plaintext highlighter-rouge">$P_Action</code> vs <code class="language-plaintext highlighter-rouge">$P_Passiv</code> prepositional semantics (does “using the power of” wrap the entire expression or just the last term?), logarithm system overhaul, trig parenthesis fixes, and noun operator preposition gating.</p>
+
+<p><strong><a href="https://shel.sh/projects/3.md">3.md — The Engine Reference</a></strong> is the complete technical manual for the JavaScript conversion engine, covering the tokenization pipeline, <code class="language-plaintext highlighter-rouge">convertTokens()</code> state machine, the fallover syllable system for automatic 5-7-5 line detection, and the <code class="language-plaintext highlighter-rouge">CountkuConverter</code> and <code class="language-plaintext highlighter-rouge">HaikuValidator</code> class architectures.</p>
+
+<h2 id="the-math-engine">The Math Engine</h2>
+
+<p>The JavaScript engine converts English word phrases into executable math expressions. Some examples from the docs:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Expression</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>one plus two</td>
+      <td>1+2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>the square root of sixteen</td>
+      <td>Math.sqrt(16)</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>five to the sixtieth</td>
+      <td>(5)**60</td>
+      <td>huge</td>
+    </tr>
+    <tr>
+      <td>the sine of zero plus the log of one and two</td>
+      <td>Math.sin(0)+Math.log(1)+2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>five plus three using the power of two</td>
+      <td>(5+3)**2</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>five plus three under the power of two</td>
+      <td>5+(3)**2</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="language-plaintext highlighter-rouge">$P_Action</code> vs <code class="language-plaintext highlighter-rouge">$P_Passiv</code> distinction is the clever part. “Using” wraps the entire preceding expression in parentheses before applying the power. “Under” wraps only the immediately preceding term. Same words, different math.</p>
+
+<h2 id="sakura-count-ninja--the-game">Sakura Count Ninja — The Game</h2>
+
+<p>All of this became <strong><a href="https://shel.sh/projects/">Sakura Count Ninja</a></strong>, a browser-based counting game with four modes:</p>
+
+<ul>
+  <li><strong>Normal</strong> — Base 10 JS math expression evaluation</li>
+  <li><strong>Hard</strong> — Base 2, results shown in binary</li>
+  <li><strong>WTF</strong> — Base 16, results shown in hex</li>
+  <li><strong>Countku</strong> — English word haikus validated for 5-7-5 structure then converted to math</li>
+</ul>
+
+<p>The game features ninja animations (idle, run, jump), streak tracking, sound effects, and an end-game dashboard. The countku mode runs the full <code class="language-plaintext highlighter-rouge">HaikuValidator</code> + <code class="language-plaintext highlighter-rouge">CountkuConverter</code> dual-check system — both the syllable structure AND the math must be valid.</p>
+
+<h2 id="the-future-a-js-math-library">The Future: A JS Math Library</h2>
+
+<p>The long-term vision is extracting the countku engine into a proper JavaScript math library that <strong>invalidates non-haiku math and forces haiku-safe operations</strong>. Imagine a math library where <code class="language-plaintext highlighter-rouge">eval("one plus two")</code> works but <code class="language-plaintext highlighter-rouge">eval("1 + 2")</code> doesn’t — where every computation must pass through the linguistic layer. Where the constraint isn’t a bug, it’s the feature.</p>
+
+<p>The documentation is already structured like a language specification. The engine handles ordinals, fractions, trigonometry, logarithms, roots, powers, passive/active voice distinctions, and noise-token stripping. Turning that into a <code class="language-plaintext highlighter-rouge">countku-math</code> npm package is the natural next step.</p>
+
+<p>Play the game at <a href="https://shel.sh/projects/">shel.sh/projects</a>. Read the full docs at <a href="https://shel.sh/projects/1.md">shel.sh/projects/1.md</a>, <a href="https://shel.sh/projects/2.md">2.md</a>, and <a href="https://shel.sh/projects/3.md">3.md</a>. And remember: numbers are nature.</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/2025-07-15-countku-side-project/" hidden></a>
+    </article>
+  </div>
+
+  <aside class="post-sidebar">
+    <nav class="toc-nav" id="toc-nav" aria-label="Table of Contents">
+      <h4>On this page</h4>
+      <ul id="toc-list"></ul>
+    </nav>
+  </aside>
+</div>
+
+    </main><footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">sHEL</div>
+        <p>All the protection of a turtle without the soft underbelly. Volatile, literal-safe, automation-friendly data substrate.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="https://docs.shel.sh">Documentation</a></li>
+          <li><a href="/community/">Community</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://github.com/CommanderTurtle/docs-pages" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://docs.shel.sh/getting-started/">Getting Started</a></li>
+          <li><a href="https://docs.shel.sh/api-reference/">API Reference</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://x.com/commanderturtle" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://slack.shel.sh" target="_blank" rel="noopener">Slack</a></li>
+          <li><a href="https://linkedin.com/company/shel-project" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 sHEL Project. Released under the MIT License.</p>
+      <div class="social-links"><div class="social-links"><a href="https://github.com/CommanderTurtle/" target="_blank" rel="noopener" title="GitHub">
+      <svg class="svg-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a><a href="https://x.com/commanderturtle" target="_blank" rel="noopener" title="X / Twitter">
+      <svg class="svg-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.14H2.865l8.875 11.638Z"/></svg>
+    </a><a href="https://linkedin.com/company/turtleprotectinc" target="_blank" rel="noopener" title="LinkedIn">
+      <svg class="svg-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+    </a><a href="https://slack.shel.sh" target="_blank" rel="noopener" title="Slack">
+      <svg class="svg-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .923-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/></svg>
+    </a></div>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script>
+  </body>
+
+</html>
